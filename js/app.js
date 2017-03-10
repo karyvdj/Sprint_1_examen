@@ -46,9 +46,12 @@ function mostrarLista(estudiantes) {
     // TO DO: Iterar la lista del estudiantes para devolverlos en el formato que usa la función mostrar(estudiante)
     // Retornar el template de todos los estudiantes
     var lista = ""; //variable que almacena los estudiantes que ingresaste
-    for(var i = 0; i < estudiantes.length; i++){ //recorre la longitud del arreglo estudiantes
+    estudiantes.forEach(function (alumno){
+      lista += mostrar (alumno);
+    });
+    /*for(var i = 0; i < estudiantes.length; i++){ //recorre la longitud del arreglo estudiantes
         lista += mostrar(estudiantes[i]); //concatenacion de la lista y los estudiantes ingresados llamando a mostrar
-    }
+    }*/
     return lista;
 }
 
